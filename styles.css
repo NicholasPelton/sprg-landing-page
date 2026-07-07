@@ -1,0 +1,229 @@
+:root {
+  --ink: #1a1a17;
+  --paper: #f5f2ea;
+  --accent: #b5551f;
+  --line: #d8d2c2;
+  --muted: #5c584d;
+  --radius: 6px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 { font-size: 2.1rem; margin: 0 0 16px; }
+h2 { font-size: 1.5rem; margin: 0 0 16px; }
+h3 { font-size: 1.1rem; margin: 24px 0 8px; }
+
+em { color: var(--accent); font-style: normal; }
+
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 64px 0 48px;
+  text-align: center;
+}
+.hero .wrap { max-width: 640px; }
+.hero em { color: #e3a06a; }
+
+.subhead {
+  font-size: 1.1rem;
+  color: #d8d4c8;
+  margin: 0 0 28px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover { background: #9a4718; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--paper);
+  border: 1px solid #6b675c;
+}
+.btn-secondary:hover { border-color: var(--paper); }
+
+.fine-print {
+  font-size: 0.85rem;
+  color: #a7a297;
+  margin: 0;
+}
+
+.photo-frame {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0;
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: zoom-out;
+  z-index: 100;
+}
+.lightbox.is-open { display: flex; }
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.photo-block { margin: 0; }
+.photo-block figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+main section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.that-is-sprg {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.state-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.states p { color: var(--muted); }
+
+.feature-list, .who ul, .honest ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.feature-list li, .who ul li, .honest ul li {
+  padding: 10px 0 10px 28px;
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+.feature-list li:first-child, .who ul li:first-child, .honest ul li:first-child {
+  border-top: none;
+}
+.feature-list li::before, .who ul li::before, .honest ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.how ol {
+  padding-left: 20px;
+}
+.how ol li { margin-bottom: 12px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+th, td {
+  text-align: left;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  width: 35%;
+  color: var(--muted);
+  font-weight: 600;
+  padding-right: 16px;
+}
+
+.faq-item { margin-bottom: 22px; }
+.faq-item p { margin: 4px 0 0; color: var(--muted); }
+
+.reserve {
+  text-align: center;
+}
+.reserve .btn-primary {
+  margin-top: 12px;
+}
+
+.signup-form {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.signup-form label { display: none; }
+.signup-form input[type="email"] {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  min-width: 240px;
+}
+
+footer {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
