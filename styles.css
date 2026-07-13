@@ -64,6 +64,7 @@ em { color: var(--accent); font-style: normal; }
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -213,6 +214,12 @@ th {
   flex-wrap: wrap;
 }
 .signup-form label { display: none; }
+.signup-form .btn-secondary {
+  color: var(--ink);
+  border-color: var(--muted);
+  background: transparent;
+}
+.signup-form .btn-secondary:hover { border-color: var(--ink); }
 .signup-form input[type="email"] {
   padding: 12px 14px;
   border: 1px solid var(--line);
